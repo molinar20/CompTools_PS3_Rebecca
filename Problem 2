@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+#Problem 2
+#Reads and reports all values within the row where the max water value is present.
+import pandas as pd
+df = pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+df[df[' Water Level']==df[' Water Level'].max()]
+df.drop('Sigma', axis =0)
