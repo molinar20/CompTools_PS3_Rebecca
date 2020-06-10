@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+#Problem 1
+#Opens CSV file and sets value
+wfile = open("/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv","r")
+
+maxt = 0.0
+datet = 0.0
+
+#Sets loop to find max value and correlating time and date
+for line in wfile:
+    try:
+        for line in wfile:
+            w= (line.split)(",")[0]
+            for line in wfile:
+                p = float(line.split(",")[1])
+                maxt = max(maxt,p)
+                datet= (maxt,w)
+    except:
+        pass
+
+print ("Time and date of maximum water value:",datet)
