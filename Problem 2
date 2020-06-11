@@ -4,7 +4,5 @@
 import pandas as pd
 df = pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
 read = df[df[' Water Level'] == df[' Water Level'].max()]
-print ('Maximum Water Level:')
-print(read[' Water Level'].values[0])
-print ('Date and Time:')
-print(read['Date Time'].values[0])
+print(f"Water Level: {read[' Water Level'].values[0]}")
+print(f"Date and Time: {read['Date Time'].values[0]}")
