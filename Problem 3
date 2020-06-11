@@ -1,0 +1,11 @@
+##!/usr/bin/env python
+#Problem 3
+
+import pandas as pd
+df = pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+#Create and isolate column titled Diff in order to find range, then maximum
+df['Diff'] = df[ ' Water Level'] - df[' Water Level'].shift(1)
+readrange = df[df['Diff'] == df['Diff'].max()]
+#Print data along with accompanying date and time 
+print(f"Maximum Water Level Difference: {readrange['Diff'].values[0]}")
+print(f"Date and Time: {readrange['Date Time'].values[0]}")
