@@ -1,0 +1,28 @@
+#Taken from lecture but could not find solution
+
+import json
+import urllib.request, urllib.parse, urllib.error
+
+serviceurl = "https://tidesandcurrents.noaa.gov/waterlevels.html?id=8729108&units=standard&bdate=20181011&edate=20181012&timezone=GMT&datum=MLLW&interval=6&action=data"
+
+#Input for dates added
+while True:
+    Water_Level = input('Enter date from Panama City with available parameters: ')
+    if len(Water_Level) < 1: break
+        
+    data = Water_Level.
+        
+    url = serviceurl + "?" + urllib.parse.urlencode(
+            {' Water Level': Water_Level})
+    print('Retrieving data from', url)
+    
+    #Tell json to try to collect water_levels
+    
+    try:
+        js = json.loads(Water_Level)
+    except:
+        js = None
+            
+        for url in js:
+            print("Water Level:", url[' Water Level'])
+            print("Date:", url['Date Time'])
